@@ -1,0 +1,14 @@
+#fluent wait
+'''
+from selenium.common.exceptions import NoSuchElementException
+
+wait = WebDriverWait(driver, 10, poll_frequency=0.3, ignored_exceptions=[NoSuchElementException])
+
+search_box = wait.until(EC.visibility_of_element_located((By.NAME, "q")))
+search_box.send_keys("Fluent Wait")
+
+imfl_button = wait.until(EC.element_to_be_clickable((By.NAME, "btnI")))
+imfl_button.click()
+'''
+
+driver.quit()
